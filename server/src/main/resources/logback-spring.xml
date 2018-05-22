@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="60 seconds">
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <root level="info"/>
+    <logger name="org.springframework.web" level="debug" />
+    <logger name="org.hibernate" level="error" />
+    <logger name="com.psj" level="debug" />
+
+    <!--&lt;!&ndash; 定义日志文件的存储地址,idea中如果使用相对路径会相对代码的存储路径 &ndash;&gt;-->
+    <!--<property name="LOG_HOME" value="c:/logs"/>-->
+
+    <!--&lt;!&ndash; Simple file output &ndash;&gt;-->
+    <!--<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--&lt;!&ndash; encoder defaults to ch.qos.logback.classic.encoder.PatternLayoutEncoder &ndash;&gt;-->
+        <!--<encoder>-->
+            <!--<pattern>-->
+                <!--%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n-->
+            <!--</pattern>-->
+            <!--&lt;!&ndash; 此处设置字符集 &ndash;&gt;-->
+            <!--<charset>UTF-8</charset>-->
+        <!--</encoder>-->
+
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash; rollover daily 配置日志所生成的目录以及生成文件名的规则 &ndash;&gt;-->
+            <!--<fileNamePattern>${LOG_HOME}/log_%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+            <!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+                <!--&lt;!&ndash; or whenever the file size reaches 64 MB &ndash;&gt;-->
+                <!--<maxFileSize>64 MB</maxFileSize>-->
+            <!--</timeBasedFileNamingAndTriggeringPolicy>-->
+            <!--<maxHistory>30</maxHistory>-->
+        <!--</rollingPolicy>-->
+
+        <!--<filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+            <!--<level>INFO</level>-->
+        <!--</filter>-->
+        <!--&lt;!&ndash; Safely log to the same file from multiple JVMs. Degrades performance! &ndash;&gt;-->
+        <!--<prudent>false</prudent>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash; 按照每天生成日志文件，主要记录error级别的日志 &ndash;&gt;-->
+    <!--<appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash;日志文件输出的文件名&ndash;&gt;-->
+            <!--<fileNamePattern>${LOG_HOME}/error_%d{yyyy-MM-dd}.log</fileNamePattern>-->
+            <!--<maxHistory>60</maxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder>-->
+            <!--<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n</pattern>-->
+        <!--</encoder>-->
+    <!--</appender>-->
+
+    <!--&lt;!&ndash; 邮件监控异常 &ndash;&gt;-->
+    <!--&lt;!&ndash;<appender name="EMAIL" class="ch.qos.logback.classic.net.SMTPAppender">&ndash;&gt;-->
+        <!--&lt;!&ndash;<smtpHost>smtp.163.com</smtpHost>&ndash;&gt;-->
+        <!--&lt;!&ndash;<username>cairs-2w010@163.com</username>&ndash;&gt;-->
+        <!--&lt;!&ndash;<password>zxc1s2dsa46</password>&ndash;&gt;-->
+        <!--&lt;!&ndash;<from>cairs-2010@163.com</from>&ndash;&gt;-->
+        <!--&lt;!&ndash;<to>403411d876@qq.com</to>&ndash;&gt;-->
+        <!--&lt;!&ndash;<subject>【Error】: %logger</subject>&ndash;&gt;-->
+        <!--&lt;!&ndash;<layout class="ch.qos.logback.classic.html.HTMLLayout"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<filter class="ch.qos.logback.classic.filter.ThresholdFilter">&ndash;&gt;-->
+            <!--&lt;!&ndash;<level>ERROR</level>&ndash;&gt;-->
+        <!--&lt;!&ndash;</filter>&ndash;&gt;-->
+    <!--&lt;!&ndash;</appender>&ndash;&gt;-->
+
+    <!--&lt;!&ndash; Enable file appenders for all log messages. By default, only log at level INFO and above. &ndash;&gt;-->
+    <!--<root level="INFO">-->
+        <!--<appender-ref ref="FILE"/>-->
+    <!--</root>-->
+
+    <!--<logger name="com.psj" level="ERROR">-->
+        <!--<appender-ref ref="ERROR"/>-->
+    <!--</logger>-->
+
+    <!--<logger name="com.ibatis" level="DEBUG" />-->
+    <!--<logger name="com.ibatis.common.jdbc.SimpleDataSource" level="DEBUG" />-->
+    <!--<logger name="com.ibatis.common.jdbc.ScriptRunner" level="DEBUG" />-->
+    <!--<logger name="com.ibatis.sqlmap.engine.impl.SqlMapClientDelegate" level="DEBUG" />-->
+    <!--<logger name="java.sql.Connection" level="DEBUG" />-->
+    <!--<logger name="java.sql.Statement" level="DEBUG" />-->
+    <!--<logger name="java.sql.PreparedStatement" level="DEBUG" />-->
+
+</configuration>
