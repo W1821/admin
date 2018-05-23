@@ -26,8 +26,14 @@ public class AdminConfig {
      * 手机号码正则表达式
      */
     private String phoneNumberRegexp;
+    /**
+     * security的session退出请求
+     */
     private String logoutUrl;
-    private String logoutSuccessUrl;
+    /**
+     * security退出请求成功跳转url
+     */
+    private String logoutSuccessUrl = "/";
 
     /**
      * 拦截器、权限验证忽略path

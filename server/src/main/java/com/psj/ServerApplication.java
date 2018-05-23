@@ -9,7 +9,6 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * @author Administrator
  */
 @SpringBootApplication
-@ServletComponentScan
 public class ServerApplication {
 
     public static void main(String[] args) {
