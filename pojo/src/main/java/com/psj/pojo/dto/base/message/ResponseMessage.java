@@ -20,7 +20,7 @@ import lombok.*;
 @ApiModel("统一响应")
 public class ResponseMessage<T> {
 
-    @ApiModelProperty(value = "返回码", example = "1000")
+    @ApiModelProperty(value = "web socket 返回码", example = "1000")
     private Integer code;
 
     @ApiModelProperty(value = "错误状态码,如果是0，表示正确", example = "0")
