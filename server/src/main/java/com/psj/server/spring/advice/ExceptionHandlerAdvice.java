@@ -64,7 +64,7 @@ public class ExceptionHandlerAdvice {
     @SuppressWarnings("unchecked")
     public ResponseEntity<ResponseMessage> myErrorHandler(AdminException ex) {
         ResponseMessage responseMessage = ex.getResponseMessage();
-        log.error("拦截捕捉自定义异常 - message = {}", JsonUtil.objToJsonStr(responseMessage));
+        log.error("拦截捕捉自定义异常 - message = {}", JsonUtil.objToJsonString(responseMessage));
         return ResponseMessageUtil.createResponseEntity(responseMessage);
     }
 

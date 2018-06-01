@@ -1,8 +1,10 @@
 package com.psj;
 
+import com.psj.common.util.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 import javax.annotation.PostConstruct;
 
@@ -14,7 +16,8 @@ import javax.annotation.PostConstruct;
 public class ServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServerApplication.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(ServerApplication.class, args);
+        SpringContextUtil.setApplicationContext(applicationContext);
     }
 
     @PostConstruct
