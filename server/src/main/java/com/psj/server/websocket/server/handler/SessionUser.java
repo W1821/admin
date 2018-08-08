@@ -1,4 +1,4 @@
-package com.psj.server.websocket;
+package com.psj.server.websocket.server.handler;
 
 
 import com.psj.common.util.ThreadPoolUtil;
@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  * 用户登录后，绑定用户信息
  * 只提供一个构造方法和get方法
  *
- * @author zack
+ * @author saiya
  * @date 2018/2/23.
  */
 @Getter

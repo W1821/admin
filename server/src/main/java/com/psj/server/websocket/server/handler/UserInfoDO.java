@@ -1,4 +1,4 @@
-package com.psj.server.websocket;
+package com.psj.server.websocket.server.handler;
 
 import lombok.Getter;
 import lombok.ToString;

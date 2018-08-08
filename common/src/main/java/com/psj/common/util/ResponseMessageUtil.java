@@ -3,10 +3,11 @@ package com.psj.common.util;
 import com.psj.common.constant.GlobalCodeEnum.ErrorCode;
 import com.psj.common.constant.GlobalCodeEnum.SuccessCode;
 import com.psj.pojo.dto.base.message.ResponseMessage;
-import com.sun.istack.internal.NotNull;
 import org.apache.poi.ss.formula.functions.T;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * <br>

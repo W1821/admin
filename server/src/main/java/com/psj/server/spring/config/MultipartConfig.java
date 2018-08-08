@@ -1,5 +1,6 @@
-package com.psj.config.file;
+package com.psj.server.spring.config;
 
+import com.psj.config.file.FileUploadConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.MultipartConfigFactory;

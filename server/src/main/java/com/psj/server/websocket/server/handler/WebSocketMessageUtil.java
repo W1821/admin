@@ -1,4 +1,4 @@
-package com.psj.server.websocket;
+package com.psj.server.websocket.server.handler;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.socket.TextMessage;

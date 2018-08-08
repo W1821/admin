@@ -1,4 +1,4 @@
-package com.psj.server.websocket;
+package com.psj.server.websocket.server.handler;
 
 import com.psj.common.constant.GlobalCodeEnum;
 import com.psj.common.exception.AdminException;

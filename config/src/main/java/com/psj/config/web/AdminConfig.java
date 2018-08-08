@@ -58,6 +58,9 @@ public class AdminConfig {
             /* 前端访问防止404 */
             "/main/**",
 
+            /* web socket TODO 暂时忽略，便于测试*/
+            "/ws/**",
+
             /* 阿里数据库连接池监控 */
             "/druid/**"
     };
