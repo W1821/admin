@@ -1,12 +1,12 @@
 package com.psj.config.web;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * <br>
@@ -16,7 +16,10 @@ import java.util.List;
  *
  * @author Administrator
  */
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Component
 @Configuration
 @ConfigurationProperties(prefix = "admin.config")
@@ -26,8 +29,14 @@ public class AdminConfig {
      * 手机号码正则表达式
      */
     private String phoneNumberRegexp;
+    /**
+     * security的session退出请求
+     */
     private String logoutUrl;
-    private String logoutSuccessUrl;
+    /**
+     * security退出请求成功跳转url
+     */
+    private String logoutSuccessUrl = "/";
 
     /**
      * 拦截器、权限验证忽略path
@@ -48,6 +57,9 @@ public class AdminConfig {
 
             /* 前端访问防止404 */
             "/main/**",
+
+            /* web socket TODO 暂时忽略，便于测试*/
+            "/ws/**",
 
             /* 阿里数据库连接池监控 */
             "/druid/**"

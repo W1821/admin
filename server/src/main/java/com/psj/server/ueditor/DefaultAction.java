@@ -55,7 +55,7 @@ public class DefaultAction implements Action {
             return ResponseUtil.error(UeditorConstant.IO_ERROR);
         }
         String originalFileName = upfile.getOriginalFilename();
-        return JsonUtil.objToJsonStr(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
+        return JsonUtil.objToJsonString(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
     }
 
 
@@ -79,7 +79,7 @@ public class DefaultAction implements Action {
         if (url == null) {
             return ResponseUtil.error(UeditorConstant.IO_ERROR);
         }
-        return JsonUtil.objToJsonStr(new UploadState(UeditorConstant.SUCCESS, url, "", ""));
+        return JsonUtil.objToJsonString(new UploadState(UeditorConstant.SUCCESS, url, "", ""));
     }
 
     /**
@@ -105,7 +105,7 @@ public class DefaultAction implements Action {
             return ResponseUtil.error(UeditorConstant.IO_ERROR);
         }
         String originalFileName = upfile.getOriginalFilename();
-        return JsonUtil.objToJsonStr(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
+        return JsonUtil.objToJsonString(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
     }
 
     /**
@@ -131,7 +131,7 @@ public class DefaultAction implements Action {
             return ResponseUtil.error(UeditorConstant.IO_ERROR);
         }
         String originalFileName = upfile.getOriginalFilename();
-        return JsonUtil.objToJsonStr(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
+        return JsonUtil.objToJsonString(new UploadState(UeditorConstant.SUCCESS, url, originalFileName, originalFileName));
     }
 
     /**

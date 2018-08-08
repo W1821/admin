@@ -29,6 +29,7 @@ public class ExceptionHandlerAdvice {
      */
     @ResponseBody
     @ExceptionHandler(value = Exception.class)
+    @SuppressWarnings("unchecked")
     public ResponseEntity<ResponseMessage> errorHandler(Exception ex) {
         log.error("全局异常捕捉处理", ex);
         return ResponseMessageUtil.createResponseEntity(ResponseMessageUtil.error(ex.getMessage()));
@@ -40,6 +41,7 @@ public class ExceptionHandlerAdvice {
      */
     @ResponseBody
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
+    @SuppressWarnings("unchecked")
     public ResponseEntity<ResponseMessage> errorHandler(MethodArgumentNotValidException ex) {
         // 参数校验失败信息
         FieldError fieldError = ex.getBindingResult().getFieldError();
@@ -59,9 +61,10 @@ public class ExceptionHandlerAdvice {
      */
     @ResponseBody
     @ExceptionHandler(value = AdminException.class)
+    @SuppressWarnings("unchecked")
     public ResponseEntity<ResponseMessage> myErrorHandler(AdminException ex) {
         ResponseMessage responseMessage = ex.getResponseMessage();
-        log.error("拦截捕捉自定义异常 - message = {}", JsonUtil.objToJsonStr(responseMessage));
+        log.error("拦截捕捉自定义异常 - message = {}", JsonUtil.objToJsonString(responseMessage));
         return ResponseMessageUtil.createResponseEntity(responseMessage);
     }
 

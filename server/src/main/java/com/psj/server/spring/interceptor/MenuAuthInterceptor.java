@@ -3,11 +3,9 @@ package com.psj.server.spring.interceptor;
 import com.psj.common.constant.GlobalConstant;
 import com.psj.common.util.ExceptionUtil;
 import com.psj.common.util.UserDetailUtil;
-import com.psj.config.web.AdminConfig;
 import com.psj.core.bo.system.UserBO;
 import com.psj.pojo.dto.security.UserDetail;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -29,7 +27,7 @@ import java.util.List;
 public class MenuAuthInterceptor implements HandlerInterceptor {
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         log.debug("---------------拦截器开始---------------");
 
         // 判断当前登录人的权限

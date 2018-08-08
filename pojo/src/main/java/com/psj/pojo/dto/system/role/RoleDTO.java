@@ -1,6 +1,5 @@
 package com.psj.pojo.dto.system.role;
 
-import com.psj.pojo.po.system.RoleModel;
 import lombok.*;
 
 import java.util.Date;

@@ -37,7 +37,7 @@ public class RestAuthenticationEntryPoint extends BasicAuthenticationEntryPoint 
         response.setContentType(GlobalConstant.CONTENT_TYPE_APPLICATION_JSON);
         ResponseMessage message = ResponseMessageUtil.buildNoAuthErrorMessage();
         @Cleanup PrintWriter out = response.getWriter();
-        out.append(JsonUtil.objToJsonStr(message));
+        out.append(JsonUtil.objToJsonString(message));
     }
 
     @Override
