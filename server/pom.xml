@@ -58,6 +58,7 @@
             <scope>test</scope>
         </dependency>
 
+
         <!-- 文档页面，可以重新部署一个项目读取当前项目的api接口json数据 -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -76,8 +77,18 @@
                 <configuration>
                     <!-- 热部署该配置必须 -->
                     <fork>false</fork>
+
                 </configuration>
             </plugin>
+
+            <!-- 打包跳过test -->
+            <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
