@@ -21,6 +21,7 @@ public class BeanConfig {
     }
 
 
+
     /**
      * web socket 配置
      */
