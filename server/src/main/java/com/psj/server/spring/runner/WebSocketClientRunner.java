@@ -26,7 +26,7 @@ public class WebSocketClientRunner implements CommandLineRunner {
     @Override
     public void run(String... args) {
         log.info("web socket start client");
-        client.connectToServer();
+//        client.connectToServer();
     }
 
 }

@@ -69,7 +69,7 @@ public class UserController extends BaseController {
      */
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     @SuppressWarnings("unchecked")
-    public ResponseEntity<ResponseMessage> save(@Valid @RequestBody UserDTO dto) {
+    public ResponseEntity<ResponseMessage> save( @RequestBody UserDTO dto) {
         ResponseMessage message;
         if (!dto.getPhoneNumber().matches(adminConfig.getPhoneNumberRegexp())) {
             message = ResponseMessageUtil.error(ErrorCode.ERROR_1201);
